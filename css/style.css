@@ -28,7 +28,7 @@ body {
 .site-header.scrolled {
   height: 70px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .main-nav ul {
@@ -332,7 +332,11 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  background: #f0f0f0;
+  background: #000000;
+}
+
+footer p {
+  color: #fff;
 }
 
 /* ANIMATIONS */
