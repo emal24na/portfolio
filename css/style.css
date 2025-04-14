@@ -317,6 +317,14 @@ textarea:focus {
   color: #e63946;
 }
 
+.privacy-notice {
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
 button {
   background: #111;
   color: #fff;
