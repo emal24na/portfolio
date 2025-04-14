@@ -19,7 +19,7 @@ body {
   height: 100px;
   padding: 0 2rem;
   background-color: #fff;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 0.5px solid #e0e0e0;
   transition: height 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
   transform: translateZ(0);
@@ -268,13 +268,6 @@ textarea {
   transition: border-color 0.3s ease;
   position: relative;
   z-index: 1;
-}
-
-input,
-textarea {
-  -webkit-appearance: none;
-  appearance: none;
-  background-clip: padding-box;
 }
 
 input:focus,
