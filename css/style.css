@@ -7,6 +7,8 @@ body {
   color: #111;
 }
 
+/* HEADER */
+
 .site-header {
   position: sticky;
   top: 0;
@@ -49,7 +51,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* SCROLLED STATE — blir till menylook */
 .site-header.scrolled .logo {
   height: 40px;
 }
@@ -79,6 +80,9 @@ body {
   left: 0;
   transition: all 0.4s ease;
   border-radius: 1px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .burger:nth-child(1) {
@@ -108,12 +112,6 @@ body {
   transform: rotate(-45deg);
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-}
-
 .logo {
   height: 60px;
 }
@@ -127,11 +125,30 @@ nav ul {
 }
 
 nav a {
+  position: relative;
   text-decoration: none;
   color: #111;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: #111;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
 }
 
 .hero {
@@ -191,6 +208,8 @@ nav a {
   margin-bottom: 1rem;
 }
 
+/* FORM */
+
 form {
   display: flex;
   flex-direction: column;
@@ -233,6 +252,32 @@ textarea:focus {
   background-size: 100% 2px;
 }
 
+.form-status-message {
+  text-align: center;
+  min-height: 1.5em; /* Reservutrymme – justeras vid behov */
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #111;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  visibility: hidden;
+}
+
+.form-status-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.form-status-message.success {
+  color: #2d6a4f;
+}
+
+.form-status-message.error {
+  color: #e63946;
+}
+
 button {
   background: #111;
   color: #fff;
@@ -241,6 +286,8 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* FOOTER */
 
 footer {
   text-align: center;

@@ -50,9 +50,41 @@ document
     observer.observe(el);
   });
 
-// Form alert
-document.querySelector("form").addEventListener("submit", function (e) {
+// FORM
+
+const form = document.querySelector("form");
+const statusMessage = document.querySelector(".form-status-message");
+
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  alert("Thanks for your message! I'll get back to you soon.");
-  this.reset();
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      showMessage("Thank you! Your message has been sent. ✨", "success");
+      form.reset();
+    } else {
+      showMessage("Oops! Something went wrong. Please try again.", "error");
+    }
+  } catch (error) {
+    showMessage("Network error. Please check your connection.", "error");
+  }
 });
+
+function showMessage(message, type) {
+  statusMessage.textContent = message;
+  statusMessage.className = "form-status-message visible " + type;
+
+  setTimeout(() => {
+    statusMessage.classList.remove("visible");
+  }, 5000); // meddelandet försvinner efter 5 sek
+}
