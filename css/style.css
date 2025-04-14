@@ -270,6 +270,13 @@ textarea {
   z-index: 1;
 }
 
+input,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+}
+
 input:focus,
 textarea:focus {
   border-bottom: 2px solid #111;
