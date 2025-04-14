@@ -17,6 +17,18 @@ window.addEventListener("scroll", () => {
   }
 });
 
+//MENU
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".main-nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  menuToggle.classList.toggle("open");
+
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", !expanded);
+});
+
 // Reveal animation on scroll
 const observer = new IntersectionObserver(
   (entries) => {

@@ -10,18 +10,27 @@
   </head>
   <body>
     <header class="site-header">
-      <img src="img/logo.png" alt="Logo" class="logo" />
-      <nav>
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="burger"></span>
+        <span class="burger"></span>
+        <span class="burger"></span>
+      </button>
     </header>
 
     <section class="hero">
-      <h1>Hi! I'm Alen Eminovic</h1>
+      <h1>Hi, I'm Alen Eminovic!</h1>
       <p>
         I'm a graphic designer and web developer who loves fashion, typography,
         and digital magic.
@@ -41,14 +50,26 @@
       <h2>Projects</h2>
       <div class="grid">
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x250" alt="Project 1" />
-          <h3>Portfolio Website</h3>
+          <img src="img/bite_rush.png" alt="Project 1" />
+          <h3>Bite Rush</h3>
           <p>
             An experimental layout inspired by magazines and modern UI trends.
           </p>
         </div>
         <div class="project-card">
-          <img src="https://via.placeholder.com/400x250" alt="Project 2" />
+          <img src="img/store_sign.png" alt="Project 2" />
+          <h3>Brand Identity</h3>
+          <p>A full visual identity for an upcoming fashion brand.</p>
+        </div>
+        <div class="project-card">
+          <img src="img/bite_rush.png" alt="Project 1" />
+          <h3>Bite Rush</h3>
+          <p>
+            An experimental layout inspired by magazines and modern UI trends.
+          </p>
+        </div>
+        <div class="project-card">
+          <img src="img/store_sign.png" alt="Project 2" />
           <h3>Brand Identity</h3>
           <p>A full visual identity for an upcoming fashion brand.</p>
         </div>
@@ -57,11 +78,35 @@
 
     <section id="contact" class="editorial-section">
       <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
+      <form action="https://formspree.io/f/xvgkljod" method="POST">
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Name"
+          aria-label="Name"
+          required
+        />
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email"
+          aria-label="Email"
+          required
+        />
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Type your message"
+          aria-label="Message"
+          rows="6"
+          required
+        ></textarea>
+
+        <button type="submit"><span>Send Message</span></button>
       </form>
     </section>
 
