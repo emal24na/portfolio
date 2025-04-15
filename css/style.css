@@ -247,6 +247,10 @@ nav a:hover::after {
   margin-bottom: 1rem;
 }
 
+.project-card a {
+  color: #000000;
+}
+
 /* FORM */
 
 form {
