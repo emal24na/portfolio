@@ -7,11 +7,11 @@
     <!-- Basic SEO -->
     <meta
       name="description"
-      content="Portfolio of Alen Eminovic – a Jönköping-based designer and developer blending fashion, typography, and digital experiences."
+      content="Portfolio of Alen Eminovic – a Jönköping-based Graphic Designer and Web Developer blending typography, art and digital experiences."
     />
     <meta
       name="keywords"
-      content="graphic design, web development, portfolio, Jönköping, Alen Eminovic, Graphic Design, UX, UI, frontend"
+      content="graphic design, web development, portfolio, Jönköping, Alen Eminovic, Graphic Design, UX, UI, frontend, art"
     />
     <meta name="author" content="Alen Eminovic" />
 
@@ -25,12 +25,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
     <header class="site-header">
       <a href="index.html">
-        <img src="img/logo.png" alt="Logo" class="logo" />
+        <img src="img/logo.webp" alt="Logo" class="logo" />
       </a>
 
       <nav class="main-nav">
@@ -50,25 +51,29 @@
 
     <section class="hero">
       <video class="hero-video" autoplay muted loop playsinline>
-        <source src="video/hero.mp4" type="video/mp4" />
+        <source
+          src="video/hero-720p.mp4"
+          type="video/mp4"
+          media="(max-width: 1024px)"
+        />
+        <source src="video/hero-1080p.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <div class="hero-content">
         <h1>Hi, I'm Alen Eminovic</h1>
-        <p>
-          Graphic Designer & Web Developer – crafting editorial-style
-          experiences.
-        </p>
+        <p>Graphic Designer & Web Developer – creating visual experiences.</p>
       </div>
     </section>
 
     <section id="about" class="editorial-section">
       <h2>About Me</h2>
       <p>
-        I combine sharp aesthetics with technical precision to create
-        experiences that look good and work flawlessly. Inspired by editorials,
-        minimalism, and clever code.
+        I'm a graphic design and web development student at Jönköping
+        University. I focus on creating clean, modern interfaces and building
+        websites that feel as good as they look. I'm into UI/UX, simple
+        interactions, and thoughtful design that actually works. Whether it's
+        layout, typography or code. You can count me in.
       </p>
     </section>
 
@@ -76,7 +81,7 @@
       <h2>Projects</h2>
       <div class="grid">
         <div class="project-card">
-          <img src="img/bite_rush.png" alt="Image of the Bite Rush app" />
+          <img src="img/bite-rush.webp" alt="Image of the Bite Rush app" />
           <h3>Bite Rush</h3>
           <p>
             Group project where we created an app UI Design and extensive UX
@@ -84,7 +89,7 @@
           </p>
         </div>
         <div class="project-card">
-          <img src="img/store_sign.png" alt="Picture of branding" />
+          <img src="img/store-sign.webp" alt="Picture of branding" />
           <h3>Brand Identity</h3>
           <p>
             A full visual identity for an Italian restaurant. I was inspired by
@@ -92,22 +97,30 @@
           </p>
         </div>
         <div class="project-card">
-          <img src="img/edit-visual.png" alt="Visuals of Edit Magazine" />
+          <img src="img/edit-visual.webp" alt="Visuals of Edit Magazine" />
           <h3>Magazine Design</h3>
           <p>
             I am Head of Design for the EDIT. school magazine at Jönköping
-            University. You can read it
+            University. You can read the latest issue
             <a
               href="https://www.calameo.com/read/0059850902e8daa94f4a3"
               target="_blank"
-              >here</a
+              >here.</a
             >
           </p>
         </div>
         <div class="project-card">
-          <img src="img/store_sign.png" alt="Project 2" />
-          <h3>Brand Identity</h3>
-          <p>A full visual identity for an upcoming fashion brand.</p>
+          <img src="img/argentiq.webp" alt="Webiste design" />
+          <h3>Web design</h3>
+          <p>
+            School assignment where we created an ecommerce website with HTML,
+            CSS and JavaScipt. You can view the website.
+            <a
+              href="https://front-end-fundamentals-2025.github.io/fef-project-group-7/index.html"
+              target="_blank"
+              >here.</a
+            >
+          </p>
         </div>
       </div>
     </section>

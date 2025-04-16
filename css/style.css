@@ -173,8 +173,20 @@ nav a:hover::after {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.75;
-  filter: brightness(0.6);
+  opacity: 0;
+  animation: fadeInVideo 1.5s ease-out forwards;
+  filter: brightness(
+    0.6
+  ); /* Behåll detta om du vill ha lite mörkare ton under texten */
+}
+
+@keyframes fadeInVideo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero-content {
@@ -260,39 +272,37 @@ form {
   max-width: 500px;
   margin: 0 auto;
 }
-
 input,
 textarea {
-  padding: 1rem;
-  font-size: 1rem;
+  all: unset;
+  width: 100%;
+  padding: 1rem 0;
   font-family: "loos-wide", sans-serif;
-  background-color: #fff;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  transition: border-color 0.3s ease;
+  font-size: 1rem;
   position: relative;
-  z-index: 1;
-}
-
-input:focus,
-textarea:focus {
-  border-bottom: 2px solid #111;
-  outline: none;
-}
-
-/* Extra ✨ border animation line */
-input,
-textarea {
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
   background-image: linear-gradient(#111, #111);
   background-size: 0% 2px;
   background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: background-size 0.4s ease;
+  background-position: left calc(100%);
+  transition: background-size 0.3s ease-in-out;
 }
 
 input:focus,
 textarea:focus {
   background-size: 100% 2px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
+}
+
+textarea {
+  min-height: 140px;
+  resize: none;
+  line-height: 1.6;
 }
 
 .form-status-message {
@@ -303,7 +313,7 @@ textarea:focus {
   color: #111;
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   visibility: hidden;
 }
 
@@ -370,7 +380,6 @@ body {
 
 /* MEDIA SCREEN */
 
-/* Mobilanpassning */
 @media (max-width: 768px) {
   .main-nav {
     position: absolute;
