@@ -359,6 +359,23 @@ footer {
 
 footer p {
   color: #fff;
+  display: inline;
+}
+
+footer a {
+  color: #fff;
+  display: inline;
+  text-decoration: wavy;
+}
+
+.links {
+  display: block;
+  padding-top: 1rem;
+}
+
+#links {
+  display: block;
+  margin: 0.5rem;
 }
 
 /* ANIMATIONS */
