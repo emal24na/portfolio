@@ -365,7 +365,7 @@ footer p {
 footer a {
   color: #fff;
   display: inline;
-  text-decoration: wavy;
+  text-decoration: none;
 }
 
 .links {
