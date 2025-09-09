@@ -220,6 +220,10 @@ nav a:hover::after {
   margin: 0 auto;
 }
 
+#about p {
+  line-height: 2rem;
+}
+
 .editorial-section {
   padding: 4rem 2rem;
   max-width: 1000px;
