@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Bite Rush",
+    "slug": "bite-rush",
+    "description": "2024",
+    "image": "img/bite-rush.webp",
+    "link": "/projects/bite-rush.html",
+    "color": "#E63946",
+    "pantone": "PANTONE 1788 C",
+    "tags": ["UI", "UX", "Prototype"]
+  },
+  {
+    "title": "Bite Rush",
+    "slug": "bite-rush",
+    "description": "Group project: app UI + UX testing for a food delivery service.",
+    "image": "img/bite-rush.webp",
+    "link": "/projects/bite-rush.html",
+    "color": "#E63946",
+    "pantone": "PANTONE 1788 C",
+    "tags": ["UI", "UX", "Prototype"]
+  }
+]
