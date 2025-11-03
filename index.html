@@ -29,141 +29,105 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
-    <header class="site-header">
-      <a href="index.html">
-        <img src="img/logo.webp" alt="Logo" class="logo" />
-      </a>
-
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span class="burger"></span>
-        <span class="burger"></span>
-        <span class="burger"></span>
-      </button>
+    <header class="sidebar">
+      <figure>
+        <img src="img/logo.webp" alt="logo" />
+      </figure>
+      <figure>
+        <h3>CURRENT PROJECT</h3>
+        <p>Student at Jönköping University</p>
+        <h3>EDUCATION</h3>
+        <p>Graphic Design and Web Development</p>
+      </figure>
+      <figure>
+        <a href="">
+          <h3>HOME</h3>
+        </a>
+        <a href="">
+          <h3>ABOUT ME</h3>
+        </a>
+        <a href="">
+          <h3>PROJECTS</h3>
+        </a>
+        <a href="">
+          <h3>CONTACT</h3>
+        </a>
+      </figure>
     </header>
 
-    <section class="hero">
-      <!-- <video class="hero-video" autoplay muted loop playsinline>
-        <source
-          src="video/hero-720p.mp4"
-          type="video/mp4"
-          media="(max-width: 1024px)"
-        />
-        <source src="video/hero-1080p.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> -->
-      <img src="/img/hero-img.webp" alt="picture of project on ipad" />
+    <main>
+      <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+          <source
+            src="video/hero-720p.mp4"
+            type="video/mp4"
+            media="(max-width: 1024px)"
+          />
+          <source src="video/hero-1080p.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
 
-      <div class="hero-content">
-        <h1>Hi, I'm Alen Eminovic</h1>
-        <p>Graphic Designer & Web Developer</p>
-      </div>
-    </section>
+      <section class="about-section">
+        <h1>ABOUT ME</h1>
+        <p>
+          I'm a graphic design and web development student at Jönköping
+          University. I focus on creating clean, modern interfaces and building
+          websites that feel as good as they look. I'm into UI/UX, simple
+          interactions, and thoughtful design that actually works. Whether it's
+          layout, typography or code. You can count me in.
+        </p>
+      </section>
 
-    <section id="about" class="editorial-section">
-      <h2>About Me</h2>
-      <p>
-        I'm a graphic design and web development student at Jönköping
-        University. I focus on creating clean, modern interfaces and building
-        websites that feel as good as they look. I'm into UI/UX, simple
-        interactions, and thoughtful design that actually works. Whether it's
-        layout, typography or code. You can count me in.
-      </p>
-    </section>
+      <section class="projects-section">
+        <h1>PROJECTS</h1>
 
-    <section id="projects" class="editorial-section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="project-card">
-          <div class="project-img" style="background-color: #455375">
-            <img src="img/bite-rush.webp" alt="Image of the Bite Rush app" />
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="img/store-sign.webp" alt="Visual Branding project" />
+            <div class="project-content">
+              <div class="project-description">
+                <h2>VISUAL BRANDING</h2>
+                <h2>2024</h2>
+                <p>
+                  This project was awesome, we did a lot of cool stuff and I
+                  actually slayed and got the highest grade.
+                </p>
+              </div>
+              <div class="tags-button">
+                <div class="tags">
+                  <span>GRAPHIC DESIGN</span>
+                  <span>PRINT PRODUCTION</span>
+                  <span>LOGO DESIGN</span>
+                </div>
+                <button>+</button>
+              </div>
+            </div>
           </div>
-          <div class="project-text">
-            <h3>Bite Rush</h3>
-            <p>2024</p>
-            <p>UX/UI Design</p>
+
+          <div class="project-card">
+            <img src="img/store-sign.webp" alt="Visual Branding project" />
+            <div class="project-content">
+              <div class="project-description">
+                <h2>VISUAL BRANDING</h2>
+                <h2>2024</h2>
+                <p>
+                  This project was awesome, we did a lot of cool stuff and I
+                  actually slayed and got the highest grade.
+                </p>
+              </div>
+              <div class="tags-button">
+                <div class="tags">
+                  <span>GRAPHIC DESIGN</span>
+                  <span>PRINT PRODUCTION</span>
+                  <span>LOGO DESIGN</span>
+                </div>
+                <button>+</button>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="project-card">
-          <div class="project-img" style="background-color: #b1333e">
-            <img src="img/store-sign.webp" alt="Picture of branding" />
-          </div>
-          <div class="project-text">
-            <h3>Brand Identity</h3>
-            <p>2024</p>
-            <p>Visual Design</p>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-img" style="background-color: #e63946">
-            <img src="img/store-sign.webp" alt="Picture of branding" />
-          </div>
-          <div class="project-text">
-            <h3></h3>
-            <p>2024</p>
-            <p>Visual Design</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="editorial-section">
-      <h2>Contact</h2>
-      <form action="https://formspree.io/f/xvgkljod" method="POST">
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Name"
-          aria-label="Name"
-          required
-        />
-
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Email"
-          aria-label="Email"
-          required
-        />
-
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Type your message"
-          aria-label="Message"
-          rows="6"
-          required
-        ></textarea>
-
-        <button type="submit"><span>Send Message</span></button>
-      </form>
-      <p class="privacy-notice">
-        No tracking, no cookies, just a form. Your info stays private
-      </p>
-      <p class="form-status-message" aria-live="polite"></p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Alen Eminovic. All rights reserved.</p>
-      <div class="links">
-        <p id="links">Links</p>
-        <a href="https://www.linkedin.com/in/alen-eminovic-17a801236/"
-          >LinkedIn</a
-        >
-        <p>-</p>
-        <a href="https://www.instagram.com/alen.eminovic/">Instagram</a>
-      </div>
-    </footer>
+      </section>
+    </main>
   </body>
 </html>
